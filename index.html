@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LensCraft | Professional Photography</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm py-4 shadow-sm">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold text-gradient">LensCraft</h1>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">Home</a>
+                <a href="#" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">Portfolio</a>
+                <a href="#" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">Services</a>
+                <a href="#" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">About</a>
+                <a href="#" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity">
+                    Book a Session
+                </button>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Capture Your <span class="text-yellow-300">Perfect Moments</span></h1>
+                    <p class="text-xl mb-8 text-gray-100">Professional photography services for weddings, portraits, events, and commercial projects. Let us tell your story through stunning imagery.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                            View Portfolio
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 bg-gradient-to-br from-white/20 to-white/5 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+                            <div class="w-64 h-64 bg-gradient-to-tr from-white/30 to-white/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-camera text-white text-6xl"></i>
+                            </div>
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg">
+                            <span class="text-gray-800 font-bold text-lg">Award<br>Winning</span>
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+                            <span class="text-white font-bold text-center">10+ Years<br>Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Photography Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We specialize in various photography styles to capture your most important moments with artistic vision and technical excellence.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 p-6 rounded-2xl hover-lift border border-gray-100">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-ring text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Wedding Photography</h3>
+                    <p class="text-gray-600">Capture the magic of your special day with our artistic and emotional wedding photography.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl hover-lift border border-gray-100">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-user text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Portrait Photography</h3>
+                    <p class="text-gray-600">Professional portraits that showcase personality and emotion in a natural, authentic way.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl hover-lift border border-gray-100">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Commercial Photography</h3>
+                    <p class="text-gray-600">High-quality imagery for businesses, products, and marketing campaigns.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl hover-lift border border-gray-100">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mountain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Landscape Photography</h3>
+                    <p class="text-gray-600">Breathtaking landscape and nature photography for art collections and decor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Featured Work</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A glimpse into our portfolio showcasing diverse photography styles and creative approaches.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="rounded-2xl overflow-hidden shadow-lg hover-lift group">
+                    <div class="h-80 bg-gradient-to-br from-purple-500 to-pink-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button class="bg-white text-purple-600 px-6 py-2 rounded-full font-semibold">View Project</button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Elegant Wedding</h3>
+                        <p class="text-gray-600">St. Mary's Cathedral</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg hover-lift group">
+                    <div class="h-80 bg-gradient-to-br from-blue-500 to-teal-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button class="bg-white text-purple-600 px-6 py-2 rounded-full font-semibold">View Project</button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Urban Portraits</h3>
+                        <p class="text-gray-600">Downtown Series</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg hover-lift group">
+                    <div class="h-80 bg-gradient-to-br from-orange-500 to-red-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button class="bg-white text-purple-600 px-6 py-2 rounded-full font-semibold">View Project</button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mountain Landscapes</h3>
+                        <p class="text-gray-600">Alpine Collection</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity">
+                    View Full Portfolio
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Client Testimonials</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear what our clients have to say about their experience working with us.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white font-bold text-lg">JS</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">John Smith</h4>
+                            <p class="text-gray-600 text-sm">Wedding Client</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The photos from our wedding are absolutely stunning! They captured every emotion and special moment perfectly. We'll cherish these memories forever."</p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white font-bold text-lg">SR</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm">Portrait Client</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"I was nervous about my portrait session, but the photographer made me feel so comfortable. The results were beyond my expectations - artistic and authentic."</p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white font-bold text-lg">MC</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Michael Chen</h4>
+                            <p class="text-gray-600 text-sm">Commercial Client</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The commercial photos for our product launch were exceptional. They perfectly captured our brand identity and helped increase our online engagement by 40%."</p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Create Something Beautiful Together?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto text-gray-100">Let's discuss your project and bring your vision to life with stunning photography that tells your unique story.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                    Book a Consultation
+                </button>
+                <button class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-gradient mb-4">LensCraft</h3>
+                    <p class="text-gray-400">Professional photography services with a creative vision and technical excellence.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-600 transition-colors">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Wedding Photography</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Portrait Photography</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Commercial Photography</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Landscape Photography</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Event Photography</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-purple-500"></i>
+                            <span>123 Photography St, Creative City</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-purple-500"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-purple-500"></i>
+                            <span>hello@lenscraft.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 LensCraft Photography. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for mobile menu toggle (would need implementation)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add any interactive functionality here
+            console.log('LensCraft Photography Website Loaded');
+        });
+    </script>
+</body>
+</html>
